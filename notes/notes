@@ -1,0 +1,28 @@
+//the domain
+//example:
+// app.com , app.com/help , app.com/about
+//console.log(__dirname) to show directory name,console.log(__filename) to show the file name
+// console.log(__dirname)
+// console.log(path.join(__dirname,'..','./public'))
+//use npm module 'path' for easier manipulation of data path
+
+//express.static() take the folder we wan to serve up
+
+//to get the partial url at the back
+
+
+// app.get('',(req,res)=>{ can be remove since the express.static() already done the work for this
+//     //can sen html, json,css, js file and etc back to the webpage
+//     res.send('./public/index.html')
+// })
+
+// app.get('/help',(req,res)=>{
+//     res.send({
+//         name: 'Andrew',
+//         age:27
+//     })
+// })
+
+// app.get('/about',(req,res)=>{
+//     res.send('<h1>About Page<h1>')
+// })
