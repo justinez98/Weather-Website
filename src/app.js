@@ -5,6 +5,9 @@ const request = require('request');
 const geocode = require('./geocode')
 
 const app = express()
+// using process.env is to check the enviroment of the heroku
+//set up the port for heroku as heroku have their own port number
+const port = process.env.PORT || 3000
 
 //define path for express config
 const publicDirectoryPath = path.join(__dirname,'..','./public')
@@ -97,7 +100,7 @@ app.get('*',(req,res)=>{
     })  
 })
 
-//go to localhost:3000
-app.listen(3000,() => {
-    console.log('Server is up on port 3000.')
+//go to localhost:3000 for local
+app.listen(port,() => {
+    console.log('Server is up on port '+ port)
 })
